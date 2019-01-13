@@ -16,5 +16,34 @@ extension Float: Number {
     }
 }
 
+extension Double : Number {
+    var floatValue : Float {
+        return Float(self)
+    }
+}
+
+var three : Double = 3
+var four : Float = 4
+three.floatValue + four
+
+extension Int : Number {
+    var floatValue : Float {
+        return Float(self)
+    }
+}
+
+extension UInt : Number {
+    var floatValue : Float {
+        return Float(self)
+    }
+}
+func +(valueA : Number, valueB : Number) -> Float {
+    return valueA.floatValue + valueB.floatValue
+}
+
+let x : Double = 1.233
+let y : Int = 5
+let q = x+y
+
 
 
